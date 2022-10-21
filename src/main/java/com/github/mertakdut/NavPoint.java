@@ -25,7 +25,7 @@ public class NavPoint implements Serializable {
 	private List<Tag> openTags;
 	private boolean isCalculated;
 
-	String getId() {
+	public String getId() {
 		return id;
 	}
 
@@ -33,7 +33,7 @@ public class NavPoint implements Serializable {
 		this.id = id;
 	}
 
-	int getPlayOrder() {
+	public int getPlayOrder() {
 		return playOrder;
 	}
 
@@ -65,7 +65,7 @@ public class NavPoint implements Serializable {
 		this.type = type;
 	}
 
-	String getValue() {
+	public String getValue() {
 		return value;
 	}
 
@@ -81,7 +81,7 @@ public class NavPoint implements Serializable {
 		this.markedToDelete = markedToDelete;
 	}
 
-	int getBodyTrimStartPosition() {
+	public int getBodyTrimStartPosition() {
 		return bodyTrimStartPosition;
 	}
 
@@ -89,7 +89,7 @@ public class NavPoint implements Serializable {
 		this.bodyTrimStartPosition = bodyTrimStartPosition;
 	}
 
-	int getBodyTrimEndPosition() {
+	public int getBodyTrimEndPosition() {
 		return bodyTrimEndPosition;
 	}
 
@@ -97,7 +97,7 @@ public class NavPoint implements Serializable {
 		this.bodyTrimEndPosition = bodyTrimEndPosition;
 	}
 
-	List<Tag> getOpenTags() {
+	public List<Tag> getOpenTags() {
 		return openTags;
 	}
 
@@ -105,7 +105,7 @@ public class NavPoint implements Serializable {
 		this.openTags = openTags;
 	}
 
-	int getTypeCode() {
+	public int getTypeCode() {
 		return typeCode;
 	}
 
@@ -113,7 +113,7 @@ public class NavPoint implements Serializable {
 		this.typeCode = typeCode;
 	}
 
-	String getEntryName() {
+	public String getEntryName() {
 		return entryName;
 	}
 

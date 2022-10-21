@@ -1723,8 +1723,8 @@ class Content {
 
 		return isHtmlBodyModified ? new Pair<>(htmlBody, stringsToRemove) : null;
 	}
-	
-	String getCoverImageFileName() {
+
+	public String getCoverImageFileName() {
 
 		if (this.opfPackage != null && this.opfPackage.getMetadata() != null) {
 
@@ -1747,7 +1747,7 @@ class Content {
 		return null;
 	}
 
-	byte[] getCoverImage() throws ReadingException {
+	public byte[] getCoverImage() throws ReadingException {
 
 		String coverImageEntryName = getCoverImageFileName();
 
@@ -1801,7 +1801,7 @@ class Content {
 		return null;
 	}
 
-	List<String> getEntryNames() {
+	public List<String> getEntryNames() {
 
 		return entryNames;
 	}
@@ -1810,15 +1810,15 @@ class Content {
 		entryNames.add(zipEntryName);
 	}
 
-	Container getContainer() {
+	public Container getContainer() {
 		return container;
 	}
 
-	Package getPackage() {
+	public Package getPackage() {
 		return opfPackage;
 	}
 
-	Toc getToc() {
+	public Toc getToc() {
 		return toc;
 	}
 
@@ -1830,11 +1830,11 @@ class Content {
 		this.zipFilePath = zipFilePath;
 	}
 
-	String getZipFilePath() {
+	public String getZipFilePath() {
 		return this.zipFilePath;
 	}
 
-	List<Tag> getTagStartEndPositions(String entryName, String htmlBody) {
+	public List<Tag> getTagStartEndPositions(String entryName, String htmlBody) {
 
 		if (entryTagPositions == null || !entryTagPositions.containsKey(entryName)) {
 			if (entryTagPositions == null) {

@@ -12,7 +12,7 @@ public class BookSection {
 		return label;
 	}
 
-	void setLabel(String label) {
+	public void setLabel(String label) {
 		this.label = label;
 	}
 
@@ -20,7 +20,7 @@ public class BookSection {
 		return sectionContent;
 	}
 
-	void setSectionContent(String sectionContent) {
+	public void setSectionContent(String sectionContent) {
 		this.sectionContent = sectionContent;
 	}
 

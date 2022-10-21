@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.mertakdut</groupId>
+	<groupId>com.github.abis</groupId>
 	<artifactId>EpubParser</artifactId>
-	<version>1.0.95</version>
+	<version>1.0.96</version>
 	<packaging>jar</packaging>
 
 	<name>EpubParser</name>
@@ -41,16 +41,52 @@
 		</license>
 	</licenses>
 
+<!--	<distributionManagement>-->
+<!--		<snapshotRepository>-->
+<!--			<id>ossrh</id>-->
+<!--			<url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+<!--		</snapshotRepository>-->
+<!--		<repository>-->
+<!--			<id>ossrh</id>-->
+<!--			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+<!--		</repository>-->
+<!--	</distributionManagement>-->
+	<repositories>
+		<repository>
+			<id>fk-art-snapshot</id>
+			<name>Flipkart-Artifactory</name>
+			<url>http://artifactory.fkinternal.com/artifactory/v1.0/artifacts/libs-snapshots-local</url>
+		</repository>
+		<repository>
+			<id>fk-art-release</id>
+			<name>Flipkart-Artifactory</name>
+			<url>http://artifactory.fkinternal.com/artifactory/v1.0/artifacts/libs-release-local</url>
+		</repository>
+	</repositories>
 	<distributionManagement>
 		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<id>fk-art-snapshot</id>
+			<name>libs-snapshot</name>
+			<url>http://artifactory.fkinternal.com/artifactory/v1.0/artifacts/libs-snapshots-local</url>
 		</snapshotRepository>
 		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+			<id>fk-art-release</id>
+			<name>libs-rel</name>
+			<url>http://artifactory.fkinternal.com/artifactory/v1.0/artifacts/libs-release-local</url>
 		</repository>
 	</distributionManagement>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>fk-art-snapshot</id>
+			<name>Flipkart-Artifactory</name>
+			<url>http://artifactory.fkinternal.com/artifactory/v1.0/artifacts/libs-snapshots-local</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>fk-art-release</id>
+			<name>Flipkart-Artifactory</name>
+			<url>http://artifactory.fkinternal.com/artifactory/v1.0/artifacts/libs-release-local</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<prerequisites>
 		<maven>3.0.4</maven>
@@ -81,17 +117,17 @@
 				</configuration>
 			</plugin>
 
-			<plugin>
-				<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6.7</version>
-				<extensions>true</extensions>
-				<configuration>
-					<serverId>ossrh</serverId>
-					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-					<autoReleaseAfterClose>true</autoReleaseAfterClose>
-				</configuration>
-			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>org.sonatype.plugins</groupId>-->
+<!--				<artifactId>nexus-staging-maven-plugin</artifactId>-->
+<!--				<version>1.6.7</version>-->
+<!--				<extensions>true</extensions>-->
+<!--				<configuration>-->
+<!--					<serverId>ossrh</serverId>-->
+<!--					<nexusUrl>https://oss.sonatype.org/</nexusUrl>-->
+<!--					<autoReleaseAfterClose>true</autoReleaseAfterClose>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
